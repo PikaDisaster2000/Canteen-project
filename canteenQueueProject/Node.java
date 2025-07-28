@@ -3,7 +3,7 @@
  * The class that sets attributes to for a Node.
  *
  * Joseph T
- * Version 1.1
+ * Version 1.2
  */
 public class Node
 {

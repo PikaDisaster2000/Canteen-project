@@ -6,7 +6,7 @@ import java.io.IOException;
  * The main program.
  *
  * Joseph
- * Version 1.1
+ * Version 1.2
  */
 public class canteenProgram
 {
@@ -49,13 +49,20 @@ public class canteenProgram
                 teachersQueue.enqueue(teacherNodes);
                 }
                 int served = Integer.parseInt(parts[3]);
+                
                 // dequeue parts[3] items from the teacher queue. If there are still more nodes to dequeue remove them from students
                 for(int i= 0; i < served; i++) {
-                    if(!teachersQueue.queueEmpty()) { 
+                  if(!teachersQueue.queueEmpty()) { 
                         System.out.println("Teacher Jointime: " + teachersQueue.dequeue());
+                    } else if (!studentsQueue.queueEmpty()) {
+                       int joinTime = studentsQueue.dequeue();
+                       int waitTime = time - joinTime; 
+                       int totalStudentWaitTime = waitTime++;
+                       int totalStudentsSeen = 0;
+                       System.out.println("Student Jointime: " + studentsQueue.dequeue());
+                       totalStudentsSeen++;
                     } else {
-                        
-                        System.out.println("Student Jointime: " + studentsQueue.dequeue());
+                        System.out.println("No one was served.");
                     }
                 }
             }

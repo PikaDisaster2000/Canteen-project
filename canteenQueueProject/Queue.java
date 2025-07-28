@@ -3,7 +3,7 @@
  * The class that sets the attributes for a Queue object. 
  *
  * Joseph T
- * Version 1.1
+ * Version 1.2
  */
 public class Queue
 {
