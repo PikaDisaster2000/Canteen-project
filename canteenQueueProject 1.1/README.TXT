@@ -5,5 +5,5 @@ all they need to know. The comments should usually include at least:
 ------------------------------------------------------------------------
 
 Canteen Queue Project
-Version: 1.0
+Version: 1.1
 This is a prototype and is not the finalized product.
