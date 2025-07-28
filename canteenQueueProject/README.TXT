@@ -4,9 +4,5 @@ Tell the reader (someone who does not know anything about this project)
 all they need to know. The comments should usually include at least:
 ------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+canteenQueueProject Ver 1.1
+A starting point/code for my canteen project. Please note that there may be mistakes/bugs in the code. This is intended to show versioning control. In later versions, instructions on how to operate will appear here.
