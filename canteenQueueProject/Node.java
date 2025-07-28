@@ -1,9 +1,9 @@
 
 /**
- * The class that
+ * The class that sets attributes to for a Node.
  *
  * Joseph T
- * Version 1.0
+ * Version 1.1
  */
 public class Node
 {

@@ -3,10 +3,10 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * Write a description of class canteenProgram here.
+ * The main program.
  *
  * Joseph
- * Version 1.0
+ * Version 1.1
  */
 public class canteenProgram
 {
@@ -15,31 +15,26 @@ public class canteenProgram
      */
     public canteenProgram()
     {
-        loadData();
-        Queue studentsQueue = new Queue();
-        Queue teachersQueue = new Queue();
-        //Node a = new Node(1);
-        ///students.enqueue(a);
-        ///Node b = new Node(2);
-        ///students.enqueue(b);
-        //System.out.println(students.queueEmpty());
-        //System.out.println(students.dequeue());
-        //System.out.println(students.queueEmpty());
-        //System.out.println(students.dequeue());
-        //System.out.println(students.queueEmpty());
+        runProgram();
     }
     
     /**
      * 
      */
-    public void loadData() 
+    public void runProgram() 
     {
         File myFile = new File("arrivals.csv");
+        Queue studentsQueue = new Queue();
+        Queue teachersQueue = new Queue();
         try {
             Scanner myReader = new Scanner(myFile);
             myReader.nextLine();
-                while (myReader.hasNextLine()) {
+            while (myReader.hasNextLine()) {
                 String[] parts = myReader.nextLine().split(",");
+                if (parts.length != 4){
+                   System.out.println("Error reading file. There are more or less fields than expected. Please try again.");
+                   System.exit(0);
+                }
                 int time = Integer.parseInt(parts[0]);
                 int students = Integer.parseInt(parts[1]);
                 // create parts[1] new nodes with a time of time and a type of student, then add them to the student queue
@@ -49,18 +44,23 @@ public class canteenProgram
                 }
                 int teachers = Integer.parseInt(parts[2]);
                 // as above for teachers
+                for(int i = 0; i < teachers; i++) {
+                Node teacherNodes = new Node("Teacher",time);
+                teachersQueue.enqueue(teacherNodes);
+                }
                 int served = Integer.parseInt(parts[3]);
                 // dequeue parts[3] items from the teacher queue. If there are still more nodes to dequeue remove them from students
-                if (parts.length != 4){
-                    System.out.println("Error reading file. There are more or less fields than expected. Please try again.");
+                for(int i= 0; i < served; i++) {
+                    if(!teachersQueue.queueEmpty()) { 
+                        System.out.println("Teacher Jointime: " + teachersQueue.dequeue());
+                    } else {
+                        
+                        System.out.println("Student Jointime: " + studentsQueue.dequeue());
+                    }
                 }
-                System.out.println(time);
-                System.out.println(students);
-                System.out.println(teachers);
-                System.out.println(served);
             }
         } catch(IOException e) {
-            System.out.println("ERROR. PLEASE TRY AGAIN.");
+            System.out.println("ERROR RUNNING PROGRAM. PLEASE TRY AGAIN.");
         }
     }
     

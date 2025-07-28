@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Queue
-comment0.text=\r\n\ The\ class\ that\ works\ the\ code\ for\ \r\n\r\n\ Joseph\ T\r\n\ Version\ 1.0\r\n
+comment0.text=\r\n\ The\ class\ that\ sets\ the\ attributes\ for\ a\ Queue\ object.\ \r\n\r\n\ Joseph\ T\r\n\ Version\ 1.1\r\n
 comment1.params=
 comment1.target=Queue()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Queue\r\n

@@ -1,9 +1,9 @@
 
 /**
- * The class that works the code for 
+ * The class that sets the attributes for a Queue object. 
  *
  * Joseph T
- * Version 1.0
+ * Version 1.1
  */
 public class Queue
 {
