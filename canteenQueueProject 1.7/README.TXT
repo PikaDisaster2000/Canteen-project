@@ -4,9 +4,8 @@ Tell the reader (someone who does not know anything about this project)
 all they need to know. The comments should usually include at least:
 ------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+Canteen Queue Project
+Version: 1.7
+This is the finalized product. Just run on BlueJ and follow on prompt instructions. When you run the program, type y and enter to begin. I ask that you please do not type during the simulation (as far as I'm aware it causes no bugs, but just in case).
+
+Have fun :)
